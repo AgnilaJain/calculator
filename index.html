@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Calculator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Simple Calculator</h1>
+    </header>
+    <div class="container">
+        <fieldset id="container">
+            <form name="calculator">
+                <input id="display" type="text" name="display" readonly />
+                <!-- New Order -->
+                <input id="clearButton" class="button" type="button" value="C" onclick="clearDisplay()" />
+                <input id="deleteButton" class="button" type="button" value="Del" onclick="deleteLastCharacter()" />
+                <input id="percentButton" class="button" type="button" value="%" onclick="updateDisplay('%')" />
+                <input class="button mathButtons" type="button" value="/" onclick="updateDisplay(' / ')" />
+                <br />
+                <input class="button digits" type="button" value="7" onclick="updateDisplay('7')" />
+                <input class="button digits" type="button" value="8" onclick="updateDisplay('8')" />
+                <input class="button digits" type="button" value="9" onclick="updateDisplay('9')" />
+                <input class="button mathButtons" type="button" value="x" onclick="updateDisplay(' * ')" />
+                <br />
+                <input class="button digits" type="button" value="4" onclick="updateDisplay('4')" />
+                <input class="button digits" type="button" value="5" onclick="updateDisplay('5')" />
+                <input class="button digits" type="button" value="6" onclick="updateDisplay('6')" />
+                <input class="button mathButtons" type="button" value="-" onclick="updateDisplay(' - ')" />
+                <br />
+                <input class="button digits" type="button" value="1" onclick="updateDisplay('1')" />
+                <input class="button digits" type="button" value="2" onclick="updateDisplay('2')" />
+                <input class="button digits" type="button" value="3" onclick="updateDisplay('3')" />
+                <input class="button mathButtons" type="button" value="+" onclick="updateDisplay(' + ')" />
+                <br />
+                <input id="doubleZeroButton" class="button" type="button" value="00" onclick="updateDisplay('00')" />
+                <input class="button digits" type="button" value="0" onclick="updateDisplay('0')" />
+                <input id="decimalButton" class="button" type="button" value="." onclick="updateDisplay('.')" />
+                <input class="button mathButtons" type="button" value="=" onclick="calculate()" />
+            </form>
+        </fieldset>
+        <div id="history">
+            <h2>Operation History</h2>
+            <button id="clearHistoryButton">Clear History</button>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
